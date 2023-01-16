@@ -1,0 +1,137 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    background-image: url("/images/background_img.png");
+    background-size: cover;
+    height: 100vh;
+    background-repeat: no-repeat;
+    margin-left: 10%;
+    margin-right: 10%;
+    font-family: 'Ubuntu', sans-serif;
+    background-attachment: fixed;
+}
+
+.left-arrow {
+    position: absolute;
+    top: 23px; 
+}
+
+#nav-bar {
+    width: auto;
+    height: 50px;
+    margin-top: 14px;
+}
+
+#nav-bar #nav-items {
+    position: relative;
+    top: 14px;
+    left: 52px;
+    overflow: hidden;
+}
+
+#nav-bar #nav-items a {
+    text-decoration: none;
+    padding: 11px 17px;
+    font-size: 1.2rem;
+    text-align: center;
+    color: gray;
+}
+
+#nav-bar #nav-items a:hover {
+    color: white;
+    cursor: pointer;
+}
+
+#container {
+    height: 1500px;
+    width: auto;
+    padding-top: 15px;
+    position: relative;
+    top: 40px;
+    border-radius: 8px;
+}
+
+#intro {
+    width: auto;
+    height: auto;
+    color: #ffffff70;
+    text-align: center;
+}
+
+.created {
+    font-size: 1.2rem;
+    line-height: 1.2;
+}
+
+#about, #ruleOfT3, #help{
+    width: auto;
+    height: auto;
+    position: relative;
+    top: 48px;
+    color: #ffffff70;
+    
+}
+
+.title {
+    font-size: 2.5rem;
+    line-height: 2rem;
+    margin: 0 0 1rem;
+}
+
+.para {
+    font-size: 1.23rem;
+    color: white;
+    margin-bottom: 25px;
+    line-height: 1.4;
+}
+
+#ruleOfT3 {
+    top: 80px;
+}
+
+#ruleOfT3 ul li, #help ol li{
+    position: relative;
+    left: 34px;
+    font-size: 1.27rem;
+    color: white;
+    line-height: 1.4;
+    margin-bottom: 7px;
+    padding-right: 33px;
+}
+
+#help {
+    top: 140px;
+}
+
+.sub-title {
+    font-size: 1.7rem;
+    margin: 0 0 1rem;
+}
+
+::-webkit-scrollbar {
+    width: 0.8rem;
+}
+
+::-webkit-scrollbar-track {
+    background-color: black;
+}
+
+::-webkit-scrollbar-thumb {
+    background-color: #511af978;
+    border-radius: 1rem;
+    border: 0.5rem solid transparent;
+}
+
+
+
+
+
+

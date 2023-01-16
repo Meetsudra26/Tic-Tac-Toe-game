@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>help</title>
+    <link rel="icon" type="image/x-icon" href="/images/help-favicon.ico">
+
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&family=Ubuntu&display=swap"
+        rel="stylesheet">
+
+    <link rel="stylesheet" href="/styles/help.css">
+</head>
+
+<body>
+    <div id="centerContent">
+
+        <div id="nav-bar">
+            <a href="/index.html"><svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24"
+                fill="none" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
+                class="feather feather-arrow-left left-arrow">
+                <line x1="19" y1="12" x2="5" y2="12"></line>
+                <polyline points="12 19 5 12 12 5"></polyline>
+            </svg></a>
+
+           <div id="nav-items">
+                <a href="#about">about</a>
+                <a href="#ruleOfT3">rules</a>
+                <a href="#help">help</a>
+           </div>
+        </div>
+
+        
+
+        <div id="container">
+            <div id="intro">
+                <p class="created">Created with love by Meet.</p>
+                <p class="created">Support and help by many awesome people.</p>
+                <p class="created">Launched on 20th of January, 2023.</p>
+                <!-- <div id="visitor-counter">
+                    <p>total visitor</p>
+                    <span>99</span>
+                </div> -->
+            </div>
+            <div id="about">
+                <div class="title">about</div>
+                <p class="para">A game in which two players by turns put crosses and zeros in compartments of a figure
+                    formed by two vertical lines crossing two horizontal lines and each tries to get a row of three
+                    crosses or three zeros before the opponent does</p>
+
+                <p class="para">You probably already know how to play Tic-Tac-Toe. It's a really simple game, right?
+                    That's what most people think. But if you really wrap your brain around it, you'll discover that
+                    Tic-Tac-Toe isn't quite as simple as you think!</p>
+
+                <p class="para">Tic-Tac-Toe (along with a lot of other games) involves looking ahead and trying to
+                    figure out what the person playing against you might do next.</p>
+            </div>
+
+            <div id="ruleOfT3">
+                <div class="title">rules</div>
+                <ul>
+                    <li>The game is played on a grid that's 3 squares by 3 squares.</li>
+                    <li>You are X, your friend (or the computer in this case) is O. Players take turns putting their
+                        marks in empty squares.</li>
+                    <li>The first player to get 3 of her marks in a row (up, down, across, or diagonally) is the winner.
+                    </li>
+                    <li>When all 9 squares are full, the game is over. If no player has 3 marks in a row, the game ends
+                        in a tie.</li>
+                </ul>
+
+            </div>
+
+            <div id="help">
+                <div class="title">help</div>
+
+                <p class="para">If you know what you are doing, you can't lose at Tic-Tac-Toe. If your opponent knows what they are doing, you can't win at Tic-Tac-Toe. The game is a zero sum game. If both players are playing with an optimal strategy, every game will end in a tie.</p>
+
+                <span class="sub-title">Strategy</span>
+
+                <p class="para">A player can play a perfect game of tic-tac-toe (to win or at least draw) if, each time it is their turn to play, they choose the first available move from the following list, as used in Newell and Simon's 1972 tic-tac-toe program.</p>
+
+                <ol type="1">
+                    <li>Win: If the player has two in a row, they can place a third to get three in a row.</li>
+                    <li>Block: If the opponent has two in a row, the player must play the third themselves to block the opponent.</li>
+                    <li>Fork: Cause a scenario where the player has two ways to win (two non-blocked lines of 2).</li>
+                    <li>Blocking an opponent's fork: If there is only one possible fork for the opponent, the player should block it. Otherwise, the player should block all forks in any way that simultaneously allows them to make two in a row. Otherwise, the player should make a two in a row to force the opponent into defending, as long as it does not result in them producing a fork. For example, if "X" has two opposite corners and "O" has the center, "O" must not play a corner move to win. (Playing a corner move in this scenario produces a fork for "X" to win.)</li>
+                    <li>Center: A player marks the center. (If it is the first move of the game, playing a corner move gives the second player more opportunities to make a mistake and may therefore be the better choice; however, it makes no difference between perfect players.)</li>
+                    <li>Opposite corner: If the opponent is in the corner, the player plays the opposite corner.</li>
+                    <li>Empty corner: The player plays in a corner square.</li>
+                    <li>Empty side: The player plays in a middle square on any of the four sides.</li>
+                </ol>
+            </div>
+        </div>
+
+
+    </div>
+</body>
+
+</html>

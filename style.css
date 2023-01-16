@@ -1,0 +1,485 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background-image: url("images/background_img.png");
+    background-size: cover;
+    height: 100vh;
+    background-repeat: no-repeat;
+    text-align: center;
+    margin-left: 10%;
+    margin-right: 10%;
+    font-family: 'Ubuntu', sans-serif;
+    background-attachment: fixed;
+}
+
+#centerContent {
+    padding-top: 16px;
+    text-align: center;
+   
+}
+
+/* top --> logo, navigation menu, display current version */
+#top {
+    width: auto;
+    height: 50px;
+    padding: 0 5px;
+    display: flex;
+    justify-content: space-between;
+}
+
+#logo,
+.logo-menu-icons {
+    display: flex;
+}
+
+#icon img {
+    height: 54px;
+    width: 56px;
+}
+
+#text {
+    font-size: 27px;
+    color: #e5d8bf;
+    margin: auto;
+}
+
+.menu-icons {
+    display: flex;
+    margin: 9px 20px;
+}
+
+#logo:hover,
+#back-2-game:hover,
+.icons:hover {
+    stroke: white;
+    cursor: pointer;
+}
+
+.icons {
+    display: flex;
+    color: grey;
+    position: relative;
+    top: 5px;
+    margin: 0 3px 0;
+}
+
+.display-current-Version {
+    display: flex;
+    justify-content: end;
+    font-size: 20px;
+    text-align: center;
+    color: white;
+    padding-top: 12px;
+}
+
+/* middle --> displaying user or player detalis */
+#user-details {
+    height: 171px;
+    width: auto;
+    position: relative;
+    top: 20px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    margin: 0 6%;
+}
+
+.player-details {
+    height: 171px;
+    width: 296px;
+    background-color: rgba(217, 217, 217, 0.2);
+    margin: 0 10px 10px 10px;
+    border-radius: 14px;
+}
+
+.player-no {
+    color: black;
+    font-size: 21px;
+    font-weight: bold;
+    position: relative;
+    top: 6px;
+
+}
+
+.player-name {
+    color: white;
+    font-size: 27px;
+    font-weight: bold;
+    position: relative;
+    top: 12px;
+}
+
+.x-0 {
+    color: white;
+    font-size: 38px;
+    font-weight: bold;
+    position: relative;
+    top: 14px;
+}
+
+.score-btn {
+    height: 36px;
+    width: 178px;
+    margin: auto;
+    position: relative;
+    top: 19px;
+    display: flex;
+    justify-content: space-between;
+}
+
+.score-display {
+    height: 36px;
+    width: 65px;
+    border-radius: 7px;
+    border: 2px solid black;
+}
+
+.players-score {
+    font-size: 20px;
+    font-weight: bold;
+    position: relative;
+    top: 4px;
+    color: white;
+}
+
+.button {
+    height: 36px;
+    width: 65px;
+    font-weight: bold;
+    border-radius: 7px;
+    color: white;
+    background-color: rgba(255, 255, 255, 0);
+    border: 2px solid black;
+}
+
+.button:hover {
+    cursor: pointer;
+}
+
+.display-curr-user-playing {
+    position: relative;
+    top: 70px;
+    color: white;
+    font-size: 1.2rem;
+}
+
+/* bottom --> main tic tac toe game board */
+.GameBoard {
+    height: 285px;
+    width: 321px;
+    margin: auto;
+    position: relative;
+    top: 89px;
+   
+}
+
+.GameBoard .cell {
+    height: 95px;
+    width: 107px;
+    background: rgba(217,217,217,0.1);
+    border: 2px solid white;
+    font-size: 50px;
+    color: white;
+    
+}
+
+.GameBoard .cell:hover {
+    cursor: pointer;
+    background-color: blueviolet;
+}
+
+.r-t-l {
+    border-top-left-radius: 20px;
+}
+
+.r-t-r {
+    border-top-right-radius: 20px;
+}
+
+.r-b-l {
+    border-bottom-left-radius: 20px;
+}
+
+.r-b-r {
+    border-bottom-right-radius: 20px;
+}
+
+.disable {
+    pointer-events: none;
+}
+
+/* for bluring the background while opening the popup */
+#centerContent.active {
+    filter: blur(8px);
+    pointer-events: none;
+    user-select: none;
+}
+
+/* for opening winner popup */
+.displayWinnerPopup {
+    width: 500px;
+    height: 410px;
+    background-color: #1a0128;
+    border-radius: 10px;
+    position: absolute;
+    top: 40%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    padding-top: 15px;
+    color: whitesmoke;
+    visibility: hidden;
+    opacity: 0;
+    transition: 0.5s;
+}
+
+/* for visible the popup */
+.displayWinnerPopup.active, #editPopup.active {
+    top: 50%;
+    visibility: visible;
+    opacity: 1;
+    transition: 0.7s;
+    transition-delay: 0.2s;
+}
+
+#winner-player {
+    position: relative;
+    top: 35px;
+    display: block;
+    font-size: 2.5rem;
+}
+
+#btn2{
+    position: relative;
+    top: 85px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    margin-left: 5%;
+    margin-right: 5%;
+    
+}
+
+h1 {
+    color: aliceblue;
+    font-size: 25px;
+    cursor: pointer;
+}
+
+.btn {
+    width: 185px;
+    height: 45px;
+    font-size: 1rem;
+    font-weight: 700;
+    padding: 10px;
+    border-radius: 10px;
+    margin: 9px;
+    cursor: pointer;
+}
+
+.player_info {
+    width: auto;
+    height: auto;
+    margin: 10px auto;
+    color: white;
+    display: flex;
+    flex-direction: column;
+}
+
+.playerno, .display_x_0 {
+    font-size: 1.4rem; 
+    margin: 10px;   
+    font-weight: bold;
+}
+
+.player_info input {
+    height: 30px;
+    width: 230px;
+    border: none;
+    border-bottom: 2px solid silver;
+    background: transparent;
+    font-size: 18px;
+    text-align: center;
+    margin: auto;
+    
+}
+
+::placeholder {
+    color: white;
+    font-size: 14px;
+}
+
+input:focus{
+    outline: none;
+    color: white;
+}
+
+#divide-line {
+    width: 410px;
+    height: 1px;
+    background-color: #262633;
+    margin: auto;
+    margin-top: 24px;
+}
+
+#buttons {
+    position: relative;
+    top: 0;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    margin-left: 5%;
+    margin-right: 5%;
+}
+
+#my-canvas {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100vh;
+    visibility: hidden;
+    pointer-events: none;
+}
+
+#my-canvas.active {
+    visibility: visible;
+}
+
+
+/* media queries for responsive --> for small screen */
+@media only screen and (max-width: 620px) {
+    body {
+        margin-left: 4%;
+        margin-right: 4%;
+        height: 100vh;
+        width: 100vw;
+        overflow: hidden;
+    }
+
+    #centerContent {
+        padding-top: 10px;
+        
+    }
+
+    #logo #text {
+        display: none;
+    }
+
+    #user-details {
+        display: flex;
+        justify-content: center;
+        position: relative;
+        top: 12px;
+    }
+
+    .player-details {
+        height: 145px;
+    }
+
+    .player-no {
+        font-size: 1.2rem;
+        position: relative;
+        top: 4px;
+    }
+
+    .player-name {
+        font-size: 1.2rem;
+        position: relative;
+        top: 13px;
+    }
+
+    .x-0 {
+        font-size: 2.1rem;
+        position: relative;
+        top: 13px;
+    }
+
+    .score-btn {
+        position: relative;
+        top: 19px;
+    }
+
+    .display-curr-user-playing {
+        position: relative;
+        top: 151px;
+        font-size: 1.2rem;
+    }
+
+    .GameBoard {
+        height: 284px;
+        position: relative;
+        top: 155px;
+    }
+
+    .GameBoard .cell {
+        height: 92.66;
+    }
+
+    .displayWinnerPopup {
+        width: 375px;
+    }
+
+    .displayWinnerPopup img {
+        width: 310px;
+    }
+
+    #winner-player {
+        font-size: 1.8rem;
+    }
+
+    #btn2{
+        margin-left: 7%;
+        margin-right: 7%;
+    }
+
+    .btn {
+        width: -webkit-fill-available;
+        height: 48px;
+        font-size: 1.2rem;
+    }
+
+    #editPopup {
+        width: 375px;
+        height: 482px;
+    } 
+}
+
+/* media queries for responsive --> for tablet screen */
+@media only screen and (max-width: 900px) and (min-width: 620px) {
+    body {
+        margin-left: 6%;
+        margin-right: 6%;
+       
+    }
+
+    #user-details {
+        position: relative;
+        top: 30px;
+        margin: 0 0;
+    }
+
+    .player-details {
+        width: 252px;
+    }
+
+    .player-no {
+        font-size: 1.4rem;
+    }
+
+    .display-curr-user-playing {
+        position: relative;
+        top: 88px;
+        font-size: 1.28rem;
+    }
+
+    .GameBoard {
+        position: relative;
+        top: 110px;
+    }
+        
+}
+
